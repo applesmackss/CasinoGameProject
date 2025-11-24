@@ -1,8 +1,7 @@
 '''
-- Here, I have created a simple slot machine game
-- User will be prompted to click enter to start the game, in which the user will input a number for how much they want to bet in the session
-- They can play the slot machine a number of times until they run out of money.
-- After they run out of moneey, they will be prompted to enter more money, in which the game will restart and they can continue!
+Here, I have created a simple slot machine game
+user will be prompted to click enter to start the game, in which the user will input a number for hwo much they want to bet in the session
+they can play the slot machine a number of times until they run out of money.
 
 '''
 import random
@@ -72,17 +71,24 @@ def main():
 
             if money == 0:
                 print("You don't have enough money to keep playing! Have a good night!")
-                money = input("Please Input More Money to continue playing: ")
-                int(money)
-                main()
+                money = input("Please Input More Money to continue playing or click c to close: ")
+                
+                if money == 'c':
+                    print("Have a good night!")
+                    quit()
+                else:
+                    int(money)
+                    main()
+
                 
             if int(bet) <= 0:
                 print("You can't bet negative money! Please enter valid bet: ")
-                bet= input()
+
+                continue
 
             if int(bet) > money:
                 print("Unfortunately, you have insufficient funds. Bet a value within your budget: ")
-                bet=input()
+                continue
                 
             
             money -= int(bet)
@@ -96,5 +102,4 @@ def main():
             print('You have won: ', earnings, 'dollars!')
 
  
-
 main()
