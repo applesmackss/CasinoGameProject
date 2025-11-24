@@ -1,7 +1,8 @@
 '''
-Here, I have created a simple slot machine game
-user will be prompted to click enter to start the game, in which the user will input a number for hwo much they want to bet in the session
-they can play the slot machine a number of times until they run out of money.
+- Here, I have created a simple slot machine game
+- User will be prompted to click enter to start the game, in which the user will input a number for how much they want to bet in the session
+- They can play the slot machine a number of times until they run out of money.
+- After they run out of moneey, they will be prompted to enter more money, in which the game will restart and they can continue!
 
 '''
 import random
@@ -95,4 +96,5 @@ def main():
             print('You have won: ', earnings, 'dollars!')
 
  
+
 main()
